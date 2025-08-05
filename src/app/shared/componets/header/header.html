@@ -1,0 +1,14 @@
+<div class="flex justify-around items-center w-full p-2 bg-stone-900">
+
+  @for (navigationLink of navigationsLinks; track $index) {
+    <div
+      [routerLink]="navigationLink.path"
+      [routerLinkActive]="'bg-stone-700 font-bold'"
+      class="rounded-2xl p-4 transition-all duration-300 ease-in-out"
+    >
+      {{ navigationLink.title }}
+    </div>
+  }
+
+</div>
+
